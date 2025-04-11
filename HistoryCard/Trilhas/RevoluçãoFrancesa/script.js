@@ -41,11 +41,25 @@ const mobileNavbar = new MobileNavbar(
 mobileNavbar.init();
 
 
-const modal = document.querySelector('.modal-container')
-
-function openModal() {
-    modal.classList.add('active')
+const modalCont1 = document.querySelector('.modal-contexto1')
+function openModalCont1() {
+    modalCont1.classList.add('active')
 }
-function closeModal(){
-    modal.classList.remove('active')
+function closeModalCont1(){
+    modalCont1.classList.remove('active')
+}
+
+const modalVideo1 = document.querySelector('.modal-video1')
+function openModalVideo1() {
+    modalVideo1.classList.add('active')
+}
+function closeModalVideo1(){
+    modalVideo1.classList.remove('active')
+}
+const modalHQ1 = document.querySelector('.modal-HQ1')
+function openModalHQ1() {
+    modalHQ1.classList.add('active')
+}
+function closeModalHQ1(){
+    modalHQ1.classList.remove('active')
 }

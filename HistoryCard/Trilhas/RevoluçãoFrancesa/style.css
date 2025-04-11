@@ -212,7 +212,25 @@ hr{
     border-top: 1px solid lightgray;
 }
 
-.modal-container{
+.modal-contexto1{
+    height: 40vw;
+    width: 100vw;
+    position: fixed;
+    top: 100px;
+    display: none;
+    z-index: 999;
+    justify-content: center;
+}
+.modal-video1{
+    height: 40vw;
+    width: 100vw;
+    position: fixed;
+    top: 100px;
+    display: none;
+    z-index: 999;
+    justify-content: center;
+}
+.modal-HQ1{
     height: 40vw;
     width: 100vw;
     position: fixed;
@@ -222,7 +240,7 @@ hr{
     justify-content: center;
 }
 
-.modal{
+.modal-contexto{
     display: flex;
     flex-direction: column;
     padding: 30px;
@@ -230,13 +248,31 @@ hr{
     border-radius: 10px;
     width: 50%;
 }
+.modal-video{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #FFBEBC;
+    border-radius: 10px;
+    width: 50%;
+}
+.modal-HQ{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #85e3ff;
+    border-radius: 10px;
+    width: 50%;
+}
 .active{
     display: flex;
 }
-.active .modal{
+.active .modal-contexto{
     animation: modal .4s;
 }
-
+.active .modal-video{
+    animation: modal .4s;
+}
 @keyframes modal{
     from{
         opacity: 0;
