@@ -34,7 +34,7 @@ nav{
 main{
     background: url("/Trilhas/Imagens/fundotrilhaRF.png") no-repeat  ;
     background-size: cover;
-    height: 750vh;
+    height: 550vh;
 }
 .nav-list{
     list-style: none;
@@ -148,10 +148,10 @@ h1{
 }
 #circ4{
     margin-top: 75px;
-    margin-left: 1045px;
+    margin-left: 1060px;
 }
 #circ5{
-    margin-top: 120px;
+    margin-top: 250px;
     margin-left: 645px;
 }
 #circ6{
@@ -168,7 +168,7 @@ h1{
 }
 #circ9{
     margin-top: 100px;
-    margin-left: 840px;
+    margin-left: 850px;
 }
 #circ10{
     margin-top: 100px;
@@ -183,15 +183,19 @@ h1{
 }
 #circ13{
     margin-top: 100px;
-    margin-left: 700px;
+    margin-left: 790px;
 }
 #circ14{
-    margin-top: 100px;
+    margin-top: 200px;
     margin-left: 550px;
 }
 #circ15{
     margin-top: 100px;
-    margin-left: 820px;
+    margin-left: 750px;
+}
+#circ16{
+    margin-top: 100px;
+    margin-left: 1050px;
 }
 
 .btnOpenModal{
