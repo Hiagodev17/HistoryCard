@@ -35,22 +35,27 @@
             <div class="circulo" id="circ1">
                 <br>
                 <br>
-                <button class="btnOpenModal" onclick="openModalCont1()"><img src="/Trilhas/Imagens/play.png"
+                <button class="btnOpenModal" onclick="openModal('.modal-contexto1')"><img src="/Trilhas/Imagens/play.png"
                         class="popUpVideo"></button>
             </div>
             <div class="circulo" id="circ2">
                 <br>
                 <br>
-                <button class="btnOpenModal" onclick="openModalVideo1()"><img src="/Trilhas/Imagens/play.png"
+                <button class="btnOpenModal" onclick="openModal('.modal-pergunta1')"><img src="/Trilhas/Imagens/play.png"
                         class="popUpVideo"></button>
             </div>
             <div class="circulo" id="circ3">
                 <br>
                 <br>
-                <button class="btnOpenModal" onclick="openModalHQ1()"><img src="/Trilhas/Imagens/play.png"
+                <button class="btnOpenModal" onclick="openModal('.modal-HQ1')"><img src="/Trilhas/Imagens/play.png"
                         class="popUpVideo"></button>
             </div>
-            <div class="circulo" id="circ4"></div>
+            <div class="circulo" id="circ4">
+                <br>
+                <br>
+                <button class="btnOpenModal" onclick="openModal('.modal-video1')"><img src="/Trilhas/Imagens/play.png"
+                        class="popUpVideo"></button>
+            </div>
             <div class="circulo" id="circ5"></div>
             <div class="circulo" id="circ6"></div>
             <div class="circulo" id="circ7"></div>
@@ -65,26 +70,45 @@
             <div class="circulo" id="circ16"></div>
         </div>
         <div class="modal-contexto1">
-            <div class="modal-contexto">
-                <h2>Info</h2>
+            <div class="modal-base modal-contexto">
+                <h2>Fases</h2>
                 <hr />
                 <span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eveniet officiis tempora
-                    perferendis rem debitis doloribus doloremque omnis, illo minima et, autem hic maiores nobis facere
-                    corporis tempore quasi fugiat.
+                    <img src="/Trilhas/Imagens/fasesdaRF.png" alt=""><br>
+                    <audio controls="controls">
+                        <source src="" type="audio/mp3" />
+                    </audio>
                 </span>
                 <hr />
                 <div class="btns">
-                    <button class="btnOK" onclick="closeModalCont1()">OK</button>
-                    <button class="btnClose" onclick="closeModalCont1()">Close</button>
+
+                    <button class="btnContinuar" onclick="closeModal('.modal-contexto1')"><strong>Continuar</strong></button>
                 </div>
             </div>
-
-
+        </div>
+        <div class="modal-pergunta1">
+            <div class="modal-base modal-pergunta">
+                <h2>Quiz</h2>
+                <hr />
+                <span>
+                    <h2 id="pergunta">Pergunta</h2>
+                    <ul>
+                        <li><button class="botao-resposta">Resposta 1</button></li>
+                        <li><button class="botao-resposta">Resposta 2</button></li>
+                        <li><button class="botao-resposta">Resposta 3</button></li>
+                        <li><button class="botao-resposta">Resposta 4</button></li>
+                    </ul>
+                </span>
+                <hr />
+                <div class="btns">
+                    <button class="btnOK" onclick="closeModal('.modal-pergunta1')">OK</button>
+                    <button class="btnClose" onclick="closeModal('.modal-pergunta1')">Close</button>
+                </div>
+            </div>
         </div>
         <div class="modal-video1">
-            <div class="modal-video">
-                <h2>Info</h2>
+            <div class="modal-base modal-video">
+                <h2>Video</h2>
                 <hr />
                 <span>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eveniet officiis tempora
@@ -96,14 +120,14 @@
                 </span>
                 <hr />
                 <div class="btns">
-                    <button class="btnOK" onclick="closeModalVideo1()">OK</button>
-                    <button class="btnClose" onclick="closeModalVideo1()">Close</button>
+                    <button class="btnOK" onclick="closeModal('.modal-video1')">OK</button>
+                    <button class="btnClose" onclick="closeModal('.modal-video1')">Close</button>
                 </div>
             </div>
         </div>
         <div class="modal-HQ1">
-            <div class="modal-HQ">
-                <h2>Info</h2>
+            <div class="modal-base modal-HQ">
+                <h2>HQ</h2>
                 <hr />
                 <span>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eveniet officiis tempora
@@ -115,11 +139,12 @@
                 </span>
                 <hr />
                 <div class="btns">
-                    <button class="btnOK" onclick="closeModalHQ1()">OK</button>
-                    <button class="btnClose" onclick="closeModalHQ1()">Close</button>
+                    <button class="btnOK" onclick="closeModal('.modal-HQ1')">OK</button>
+                    <button class="btnClose" onclick="closeModal('.modal-HQ1')">Close</button>
                 </div>
             </div>
         </div>
+
     </main>
 </body>
 <script src="script.js"></script>

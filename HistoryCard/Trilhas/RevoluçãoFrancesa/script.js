@@ -41,25 +41,31 @@ const mobileNavbar = new MobileNavbar(
 mobileNavbar.init();
 
 
-const modalCont1 = document.querySelector('.modal-contexto1')
-function openModalCont1() {
-    modalCont1.classList.add('active')
+function openModal(selector) {
+    document.querySelector(selector).classList.add('active');
 }
-function closeModalCont1(){
-    modalCont1.classList.remove('active')
+function closeModal(selector) {
+    document.querySelector(selector).classList.remove('active');
 }
 
-const modalVideo1 = document.querySelector('.modal-video1')
-function openModalVideo1() {
-    modalVideo1.classList.add('active')
-}
-function closeModalVideo1(){
-    modalVideo1.classList.remove('active')
-}
-const modalHQ1 = document.querySelector('.modal-HQ1')
-function openModalHQ1() {
-    modalHQ1.classList.add('active')
-}
-function closeModalHQ1(){
-    modalHQ1.classList.remove('active')
-}
+const perguntas = [
+    {
+        pergunta: "Quando aconteceu a Revolução Francesa?",
+        respostas: ["1792", "1789", "1795", "1799"],
+        correta: "1789"
+    },
+    {
+        pergunta: "Qual é o maior planeta do sistema solar?",
+        respostas: ["Terra", "Júpiter", "Marte", "Saturno"],
+        correta: "Júpiter"
+    },
+    {
+        pergunta: "Quem escreveu 'Dom Quixote'?",
+        respostas: ["Miguel de Cervantes", "Shakespeare", "Dante Alighieri", "Machado de Assis"],
+        correta: "Miguel de Cervantes"
+    }
+];
+let indicePerguntaAtual = 0;
+let pontuacao = 0;
+const elementoPergunta = document.getElementById("pergunta");
+const botoesResposta = document.querySelectorAll(".botao-resposta");
