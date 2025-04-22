@@ -35,14 +35,14 @@
             <div class="circulo" id="circ1">
                 <br>
                 <br>
-                <button class="btnOpenModal" onclick="openModal('.modal-contexto1')"><img src="/Trilhas/Imagens/play.png"
-                        class="popUpVideo"></button>
+                <button class="btnOpenModal" onclick="openModal('.modal-contexto1')"><img
+                        src="/Trilhas/Imagens/play.png" class="popUpVideo"></button>
             </div>
             <div class="circulo" id="circ2">
                 <br>
                 <br>
-                <button class="btnOpenModal" onclick="openModal('.modal-pergunta1')"><img src="/Trilhas/Imagens/play.png"
-                        class="popUpVideo"></button>
+                <button class="btnOpenModal" onclick="openModal('.modal-pergunta1')"><img
+                        src="/Trilhas/Imagens/play.png" class="popUpVideo"></button>
             </div>
             <div class="circulo" id="circ3">
                 <br>
@@ -56,7 +56,12 @@
                 <button class="btnOpenModal" onclick="openModal('.modal-video1')"><img src="/Trilhas/Imagens/play.png"
                         class="popUpVideo"></button>
             </div>
-            <div class="circulo" id="circ5"></div>
+            <div class="circulo" id="circ5">
+                <br>
+                <br>
+                <button class="btnOpenModal" onclick="openModal('.modal-pergunta2')"><img
+                        src="/Trilhas/Imagens/play.png" class="popUpVideo"></button>
+            </div>
             <div class="circulo" id="circ6"></div>
             <div class="circulo" id="circ7"></div>
             <div class="circulo" id="circ8"></div>
@@ -82,28 +87,36 @@
                 <hr />
                 <div class="btns">
 
-                    <button class="btnContinuar" onclick="closeModal('.modal-contexto1')"><strong>Continuar</strong></button>
+                    <button class="btnContinuar"
+                        onclick="closeModal('.modal-contexto1')"><strong>Continuar</strong></button>
                 </div>
             </div>
         </div>
         <div class="modal-pergunta1">
             <div class="modal-base modal-pergunta">
-                <h2>Quiz</h2>
-                <hr />
-                <span>
-                    <h2 id="pergunta">Pergunta</h2>
-                    <ul>
-                        <li><button class="botao-resposta">Resposta 1</button></li>
-                        <li><button class="botao-resposta">Resposta 2</button></li>
-                        <li><button class="botao-resposta">Resposta 3</button></li>
-                        <li><button class="botao-resposta">Resposta 4</button></li>
-                    </ul>
-                </span>
-                <hr />
-                <div class="btns">
-                    <button class="btnOK" onclick="closeModal('.modal-pergunta1')">OK</button>
-                    <button class="btnClose" onclick="closeModal('.modal-pergunta1')">Close</button>
-                </div>
+                <h2>Quando começou a Revolução Francesa?</h2>
+                <button class="opcao" onclick="responder(1, false)">1815</button>
+                <button class="opcao" onclick="responder(1, true)">1789</button>
+                <button class="opcao" onclick="responder(1, false)">1500</button>
+
+                <p class="feedback" id="feedback1"></p>
+                <img src="/Trilhas/Imagens/caraFeliz.png" id="imgCerta1" class="imagem-feedback hidden" alt="Parabéns! Você acertou" />
+                <button class="botao hidden" id="botaoProxima1" onclick="closeModal('.modal-pergunta1')">Continuar</button>
+                <button class="botao hidden" id="botaoRefazer1" onclick="refazer(1)">Tentar Novamente</button>
+            </div>
+        </div>
+        <div class="modal-pergunta2">
+            <div class="modal-base modal-pergunta">
+                <h2>Quem era o rei da França?</h2>
+                <button class="opcao" onclick="responder(2, false)">Napoleão</button>
+                <button class="opcao" onclick="responder(2, true)">Luís XVI</button>
+                <button class="opcao" onclick="responder(2, false)">Carlos Magno</button>
+
+                <p class="feedback" id="feedback2"></p>
+                <img src="/Trilhas/Imagens/caraFeliz.png" id="imgCerta2" class="hidden" alt="Parabéns! Você acertou" style="width: 120px; display: block; margin: 10px auto;"/>
+
+                <button class="botao hidden" id="botaoProxima2" onclick="closeModal('.modal-pergunta2')">Continuar</button>
+                <button class="botao hidden" id="botaoRefazer2" onclick="refazer(2)">Tentar Novamente</button>
             </div>
         </div>
         <div class="modal-video1">
