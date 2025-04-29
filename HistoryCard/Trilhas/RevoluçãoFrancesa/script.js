@@ -65,12 +65,14 @@ function abrirModal(classe) {
     if (correta) {
       feedback.innerText = "Parabéns! Você acertou!";
       feedback.style.color = "green";
+      feedback.style.fontSize = "30px"
       botaoProxima.classList.remove("hidden");
       botaoRefazer.classList.add("hidden");
       if (imagem) imagem.classList.remove("hidden");
     } else {
-      feedback.innerText = "Resposta incorreta. Tente novamente.";
+      feedback.innerText = "Não foi dessa vez, tente novamente!";
       feedback.style.color = "red";
+      feedback.style.fontSize = "30px"
       botaoRefazer.classList.remove("hidden");
       botaoProxima.classList.add("hidden");
       if (imagem) imagem.classList.add("hidden");
