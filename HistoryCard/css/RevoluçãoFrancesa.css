@@ -153,7 +153,7 @@ h1 {
     height: 100px;
     padding: 10px;
     margin-top: 100px;
-    margin-left: 1065px;
+    margin-left: 1015px;
     
 
 }
@@ -165,14 +165,31 @@ h1 {
     height: 200px;
     padding: 5px;
     margin-top: 25px;
-    margin-left: 760px;
-    margin-right: 760px;
+    transition: background-color 0.5s ease;
+    
+    
+}
+
+.circulo-verde{
+    background-color: #75fe85 !important;
+}
+.circulo-dourado {
+    background-color: #FFD700 !important; 
+}
+
+.parabens.circulo-verde {
+    background-color: #75fe85 !important;
+}
+
+.parabens.circulo-dourado {
+    background-color: #FFD700 !important;
 }
 
 #circ1 {
     margin-top: 50px;
-    margin-left: 745px;
+    margin-left: 690px;
     margin-bottom: 35px;
+    
 }
 
 #circ2 {
@@ -182,71 +199,72 @@ h1 {
 }
 
 #circ3 {
-    margin-left: 1120px;
+    margin-left: 1060px;
 }
 
 #circ4 {
     margin-top: 75px;
-    margin-left: 1060px;
+    margin-left: 1000px;
 }
 
 #circ5 {
     margin-top: 250px;
-    margin-left: 645px;
+    margin-left: 580px;
 }
 
 #circ6 {
     margin-top: 50px;
-    margin-left: 645px;
+    margin-left: 650px;
 }
 
 #circ7 {
     margin-top: 150px;
-    margin-left: 910px;
+    margin-left: 870px;
 }
 
 #circ8 {
     margin-top: 100px;
-    margin-left: 820px;
+    margin-left: 800px;
 }
 
 #circ9 {
     margin-top: 100px;
-    margin-left: 850px;
+    margin-left: 790px;
 }
 
 #circ10 {
     margin-top: 100px;
-    margin-left: 715px;
+    margin-left: 670px;
 }
 
 #circ11 {
     margin-top: 100px;
+    margin-left: 760px;
 }
 
 #circ12 {
     margin-top: 100px;
-    margin-left: 850px;
+    margin-left: 800px;
 }
 
 #circ13 {
     margin-top: 100px;
-    margin-left: 790px;
+    margin-left: 620px;
 }
 
 #circ14 {
     margin-top: 200px;
-    margin-left: 550px;
+    margin-left: 600px;
 }
 
 #circ15 {
     margin-top: 100px;
-    margin-left: 750px;
+    margin-left: 970px;
 }
 
 #circ16 {
     margin-top: 100px;
-    margin-left: 1050px;
+    margin-left: 1015px;
 }
 
 .btnOpenModal {
@@ -520,7 +538,7 @@ ul li {
     background-color: #f3e48e;
   }
   .sair{
-    margin-left: 1065px;
+    margin-left: 1040px;
     margin-top: 100px;
   }
     

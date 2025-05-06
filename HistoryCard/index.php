@@ -13,7 +13,7 @@
     <div id="entrada">
         <img src="Imagens/logosesi.png" width="200px" height="30,5px">
         <br>
-        <img src="Imagens/logo.png" width="570px" height="500px">
+        <img src="Imagens/logo.png" width="500px" height="450px">
         <br>
         <a href="TelaLogin.php">
             <button class="botao"><strong>LOGIN</strong></button>
