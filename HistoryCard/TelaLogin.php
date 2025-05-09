@@ -9,19 +9,42 @@
 </head>
 
 <body>
+<?php
+if (isset($_GET['status']) && $_GET['status'] == 'sucesso') {
+    echo '<div class="mensagem-sucesso"
+    style="background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border: 1px solid #c3e6cb;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;"
+    >Cadastro feito com sucesso!</div>';
+} elseif (isset($_GET['status']) && $_GET['status'] == 'erro') {
+    echo '<div class="mensagem-erro" 
+    style="background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border: 1px solid #f5c6cb;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;"
+    >Erro ao fazer o cadastro.</div>';
+}
+?>
 <div class="container">
         <div id="entrada">
-            <form action="" method="post">
+            <form action="verificaLogin.php" method="post" name="formLogin" id="formLogin">
             <img src="Imagens/logo4.png" width="200px" height="150px">
             <h3>E-mail</h3>
             <div class="Login">
                 <img class="icon" src="Imagens/user.png" alt="">
-                <input type="text" id="usuario" class="login-input" name="email">
+                <input type="text" id="usuario" class="login-input" name="email" required>
             </div>
             <h3>Senha</h3>
             <div class="Login">
                 <img class="icon" src="Imagens/senha.png">
-                <input type="password" id="senha" class="login-input" name="senha">
+                <input type="password" id="senha" class="login-input" name="senha" required>
             </div>
             <button class="botao" type="submit"><strong>LOGIN</strong></button>
             <div>
@@ -32,15 +55,3 @@
     </div>
 </body>
 </html>
-<?php
-include('TelaInicial.php');
-
-if(isset($_POST['email'] || isset($_POST['senha']))){
-    if(strlen($_POST['email']) == 0){
-        echo "Preencha seu e-mail";
-} else if(strlen($_POST['senha']) == 0){
-    echo "Preencha sua senha";
-} else{
-    
-}
-?>

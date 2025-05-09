@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trilha-Revolução Francesa</title>
-    <link rel="stylesheet" href="css/RevoluçãoFrancesa.css">
+    <title>Trilha-Brasil Colonial</title>
+    <link rel="stylesheet" href="css/BrasilColonial.css">
 </head>
 
 <body>
@@ -27,8 +27,8 @@
     </header>
     <main>
         <div class="titulo">
-            <img id="bandeira-franca" src="Imagens/bandeira-franca.png">
-            <h1>Revolução Francesa</h1>
+            <img id="fotoprin" src="Imagens/caravela-BC.png">
+            <h1>Brasil Colonial</h1>
         </div>
 
         <div class="conteudo">
@@ -465,6 +465,6 @@
 
     </main>
 </body>
-<script src="js/RevoluçãoFrancesa.js"></script>
+<script src="js/BrasilColonial.js"></script>
 
 </html>

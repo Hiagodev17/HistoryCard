@@ -36,7 +36,7 @@
                 <br>
                 <img class="img-card" src="Imagens/brasilcolonial.jpg">
                 <br><br>
-                <a href="">
+                <a href="BrasilColonial.php">
                     <button class="botaoCard">ENTRAR</button>
                 </a>
             </div>
@@ -106,13 +106,14 @@
 </body>
 </html>
 <?php
-$usuario = 'root';
-$senha = '';
-$database = 'login';
 $host = 'localhost';
+$db = 'historycard';
+$user = 'root';
+$pass = '';
 
-$mysqli = new mysqli($host, $usuario, $senha, $database);
-if($mysqli->error){
-    die("Falha ao conectar ao banco de dados:" . $mysqli->error);
+$conn = new mysqli($host, $user, $pass, $db);
+
+if ($conn->connect_error) {
+    die("Falha na conexão: " . $conn->connect_error);
 }
 ?>
