@@ -128,6 +128,30 @@
                 <button class="btnOpenModal" onclick="openModal('.modal-HQ5')"><img src="Imagens/play.png"
                         class="popUpVideo"></button>
             </div>
+            <div class="circulo" id="circ17">
+                <br>
+                <br>
+                <button class="btnOpenModal" onclick="openModal('.modal-HQ5')"><img src="Imagens/play.png"
+                        class="popUpVideo"></button>
+            </div>
+            <div class="circulo" id="circ18">
+                <br>
+                <br>
+                <button class="btnOpenModal" onclick="openModal('.modal-HQ5')"><img src="Imagens/play.png"
+                        class="popUpVideo"></button>
+            </div>
+            <div class="circulo" id="circ19">
+                <br>
+                <br>
+                <button class="btnOpenModal" onclick="openModal('.modal-HQ5')"><img src="Imagens/play.png"
+                        class="popUpVideo"></button>
+            </div>
+            <div class="circulo" id="circ20">
+                <br>
+                <br>
+                <button class="btnOpenModal" onclick="openModal('.modal-HQ5')"><img src="Imagens/play.png"
+                        class="popUpVideo"></button>
+            </div>
 
             <div class="parabens">
                 <button class="btnOpenModal-parabens" onclick="openModal('.modal-parabens')"><img
@@ -146,7 +170,7 @@
                 <span>
                     <img src="Imagens/parabens.png" style="height: 300px;width: 300px;"><br><br><br><br>
                     <strong>
-                        <p style=" font-size: 30px;">Parabéns! Você concluío o card da Revolução Francesa.<br>Vamos
+                        <p style=" font-size: 30px;">Parabéns! Você concluío o card do Brasil Colonial.<br>Vamos
                             iniciar outro card!</p>
                     </strong>
 
@@ -164,9 +188,9 @@
                 <h2>Texto-Áudio</h2>
                 <hr />
                 <span>
-                    <img src="Imagens/fasesdaRF.png" alt=""><br>
+                    <img src="Imagens/contexto1-BC.jpg" alt="" style="height:350px; width:600px"><br>
                     <audio controls="controls">
-                        <source src="audios/RF-1.mp3" type="audio/mp3" />
+                        <source src="audios/BC-1.mp3" type="audio/mp3" />
                     </audio>
                 </span>
                 <hr />
@@ -251,11 +275,11 @@
         </div>
         <div class="modal-pergunta1">
             <div class="modal-base modal-pergunta">
-                <h2>Quando aconteceu a Revolução Francesa?</h2>
-                <button class="opcao" onclick="responder(1, false)">1792</button>
-                <button class="opcao" onclick="responder(1, true)">1789</button>
-                <button class="opcao" onclick="responder(1, false)">1795</button>
-                <button class="opcao" onclick="responder(1, false)">1799</button>
+                <h2>Qual ano começou a colonização do Brasil?</h2>
+                <button class="opcao" onclick="responder(1, true)">1500</button>
+                <button class="opcao" onclick="responder(1, false)">2025</button>
+                <button class="opcao" onclick="responder(1, false)">1900</button>
+            
 
                 <p class="feedback" id="feedback1"></p>
                 <img src="Imagens/caraFeliz.png" id="imgCerta1" class="imagem-feedback hidden"
@@ -269,11 +293,11 @@
         <div class="modal-pergunta2">
             <div class="modal-base modal-pergunta">
                 <img src="Imagens/img_pergunta2.png" style="width: 250px; height: 200px;">
-                <h2 >O que eram os Três Estados na França antes da Revolução?</h2>
-                <button class="opcao" onclick="responder(2, false)">Três grupos de trabalhadores</button>
-                <button class="opcao" onclick="responder(2, false)">Três religiões</button>
-                <button class="opcao" onclick="responder(2, true)">Três classes sociais diferentes</button>
-                <button class="opcao" onclick="responder(2, false)">Três governos diferentes</button>
+                <h2 >Qual era o destino original da esquadra liderada por Pedro Álvares Cabral?</h2>
+                <button class="opcao" onclick="responder(2, false)">China</button>
+                <button class="opcao" onclick="responder(2, true)">Índia</button>
+                <button class="opcao" onclick="responder(2, false)">Inglaterra</button>
+                <button class="opcao" onclick="responder(2, false)">Austrália</button>
 
                 <p class="feedback" id="feedback2"></p>
                 <img src="Imagens/caraFeliz.png" id="imgCerta2" class="imagem-feedback hidden"
@@ -287,12 +311,12 @@
         <div class="modal-pergunta3">
             <div class="modal-base modal-pergunta">
                 <img src="Imagens/img_pergunta3.png" style="width: 350px; height: 200px;">
-                <h2>O que foi a "Queda da Bastilha"?</h2>
-                <button class="opcao" onclick="responder(3, true)">Um evento onde as pessoas destruíram uma prisão
-                    importante</button>
-                <button class="opcao" onclick="responder(3, false)">Uma festa muito famosa</button>
-                <button class="opcao" onclick="responder(3, false)">A vitória de um exército francês</button>
-
+                <h2>Qual era a principal atividade econômica encontrada pelos portugueses logo após o desembarque no Brasil?</h2>
+                
+                <button class="opcao" onclick="responder(3, false)">Banana</button>
+                <button class="opcao" onclick="responder(3, false)">Café</button>
+                <button class="opcao" onclick="responder(3, false)">Maracujá</button>
+                <button class="opcao" onclick="responder(3, true)">Pau-brasil</button>
 
                 <p class="feedback" id="feedback3"></p>
                 <img src="Imagens/caraFeliz.png" id="imgCerta3" class="imagem-feedback hidden"
@@ -305,11 +329,11 @@
         </div>
         <div class="modal-pergunta4">
             <div class="modal-base modal-pergunta">
-                <h2>Por que as pessoas lutaram na Revolução Francesa?</h2>
-                <button class="opcao" onclick="responder(4, false)">Para ter mais riqueza</button>
-                <button class="opcao" onclick="responder(4, false)">Para ter mais poder</button>
-                <button class="opcao" onclick="responder(4, true)">Para ter mais liberdade, igualdade e
-                    fraternidade</button>
+                <h2>Qual era a principal utilidade do pau-Brasil?</h2>
+                <button class="opcao" onclick="responder(4, true)">Tingir tecidos e fabricar móveis.</button>
+                <button class="opcao" onclick="responder(4, false)">Lenha para fogueira</button>
+                <button class="opcao" onclick="responder(4, false)">Fabricar armas</button>
+                
 
                 <p class="feedback" id="feedback4"></p>
                 <img src="Imagens/caraFeliz.png" id="imgCerta4" class="imagem-feedback hidden"
@@ -322,10 +346,10 @@
         </div>
         <div class="modal-pergunta5">
             <div class="modal-base modal-pergunta">
-                <h2>Quem era o rei da França antes da Revolução?</h2>
-                <button class="opcao" onclick="responder(5, true)">Luis XVI</button>
-                <button class="opcao" onclick="responder(5, false)">Napoleão Bonaparte</button>
-                <button class="opcao" onclick="responder(5, false)">Alexandre III</button>
+                <h2>Por que os portugueses decidiram investir na ocupação do Brasil?</h2>
+                <button class="opcao" onclick="responder(5, false)">Pela abundância de ouro</button>
+                <button class="opcao" onclick="responder(5, true)">Pela crise do comércio das especiarias</button>
+                <button class="opcao" onclick="responder(5, false)">Pelo aumento da população no Brasil</button>
 
                 <p class="feedback" id="feedback5"></p>
                 <img src="Imagens/caraFeliz.png" id="imgCerta5" class="imagem-feedback hidden"
@@ -336,19 +360,160 @@
                 <button class="botao hidden" id="botaoRefazer5" onclick="refazer(5)">Tentar Novamente</button>
             </div>
         </div>
+        <div class="modal-pergunta6">
+            <div class="modal-base modal-pergunta">
+                <h2>Quantos séculos os portugueses dominaram o Brasil?</h2>
+                <button class="opcao" onclick="responder(6, false)">Um século</button>
+                <button class="opcao" onclick="responder(6, false)">Dois séculos</button>
+                <button class="opcao" onclick="responder(6, true)">Três séculos</button>
+
+                <p class="feedback" id="feedback6"></p>
+                <img src="Imagens/caraFeliz.png" id="imgCerta6" class="imagem-feedback hidden"
+                    alt="Parabéns! Você acertou" />
+                <br>
+                <button class="botao hidden" id="botaoProxima6"
+                    onclick="closeModal('.modal-pergunta6')">Continuar</button>
+                <button class="botao hidden" id="botaoRefazer6" onclick="refazer(6)">Tentar Novamente</button>
+            </div>
+        </div>
+        <div class="modal-pergunta7">
+            <div class="modal-base modal-pergunta">
+                <h2>Qual foi a data da proclamação da independência brasileira?</h2>
+                <button class="opcao" onclick="responder(7, false)">1º de janeiro de 1822</button>
+                <button class="opcao" onclick="responder(7, true)">7 de setembro de 1822</button>
+                <button class="opcao" onclick="responder(7, false)">25 de dezembro de 1822</button>
+
+                <p class="feedback" id="feedback7"></p>
+                <img src="Imagens/caraFeliz.png" id="imgCerta7" class="imagem-feedback hidden"
+                    alt="Parabéns! Você acertou" />
+                <br>
+                <button class="botao hidden" id="botaoProxima7"
+                    onclick="closeModal('.modal-pergunta7')">Continuar</button>
+                <button class="botao hidden" id="botaoRefazer7" onclick="refazer(7)">Tentar Novamente</button>
+            </div>
+        </div>
+        <div class="modal-pergunta8">
+            <div class="modal-base modal-pergunta">
+                <h2>O que eram as capitanias hereditárias no Brasil Colônia?</h2>
+                <button class="opcao" onclick="responder(8, true)">Territórios dados a pessoas para administrar</button>
+                <button class="opcao" onclick="responder(8, false)">Propriedades de grandes fazendas de café</button>
+                <button class="opcao" onclick="responder(8, false)">Cidades criadas pelos portugueses</button>
+
+                <p class="feedback" id="feedback8"></p>
+                <img src="Imagens/caraFeliz.png" id="imgCerta8" class="imagem-feedback hidden"
+                    alt="Parabéns! Você acertou" />
+                <br>
+                <button class="botao hidden" id="botaoProxima8"
+                    onclick="closeModal('.modal-pergunta8')">Continuar</button>
+                <button class="botao hidden" id="botaoRefazer8" onclick="refazer(8)">Tentar Novamente</button>
+            </div>
+        </div>
+        <div class="modal-pergunta9">
+            <div class="modal-base modal-pergunta">
+                <h2>O que os donatários tinham que fazer nas capitanias hereditárias?</h2>
+                <button class="opcao" onclick="responder(9, true)">Cuidar da segurança e seguir as ordens da Coroa portuguesa</button>
+                <button class="opcao" onclick="responder(9, false)">Comprar e vender terras</button>
+                <button class="opcao" onclick="responder(9, false)">Estudar sobre a cultura brasileira</button>
+
+                <p class="feedback" id="feedback9"></p>
+                <img src="Imagens/caraFeliz.png" id="imgCerta9" class="imagem-feedback hidden"
+                    alt="Parabéns! Você acertou" />
+                <br>
+                <button class="botao hidden" id="botaoProxima9"
+                    onclick="closeModal('.modal-pergunta9')">Continuar</button>
+                <button class="botao hidden" id="botaoRefazer9" onclick="refazer(9)">Tentar Novamente</button>
+            </div>
+        </div>
+        <div class="modal-pergunta10">
+            <div class="modal-base modal-pergunta">
+                <h2>Quais capitanias deram certo e prosperaram?</h2>
+                
+                <button class="opcao" onclick="responder(10, false)">Rio de Janeiro e Minas Gerais</button>
+                <button class="opcao" onclick="responder(10, true)">Pernambuco e São Vicente</button>
+                <button class="opcao" onclick="responder(10, false)">Bahia e Espírito Santo</button>
+
+                <p class="feedback" id="feedback10"></p>
+                <img src="Imagens/caraFeliz.png" id="imgCerta10" class="imagem-feedback hidden"
+                    alt="Parabéns! Você acertou" />
+                <br>
+                <button class="botao hidden" id="botaoProxima10"
+                    onclick="closeModal('.modal-pergunta10')">Continuar</button>
+                <button class="botao hidden" id="botaoRefazer10" onclick="refazer(10)">Tentar Novamente</button>
+            </div>
+        </div>
+        <div class="modal-pergunta11">
+            <div class="modal-base modal-pergunta">
+                <h2>Onde foi fundada a primeira capital do Brasil?</h2>
+                <button class="opcao" onclick="responder(11, true)">Salvador-Bahia</button>
+                <button class="opcao" onclick="responder(11, false)">Itajaí-Santa Catarina</button>
+                <button class="opcao" onclick="responder(11, false)">Porto Alegre-Rio Grande do Sul</button>
+
+                <p class="feedback" id="feedback11"></p>
+                <img src="Imagens/caraFeliz.png" id="imgCerta11" class="imagem-feedback hidden"
+                    alt="Parabéns! Você acertou" />
+                <br>
+                <button class="botao hidden" id="botaoProxima11"
+                    onclick="closeModal('.modal-pergunta11')">Continuar</button>
+                <button class="botao hidden" id="botaoRefazer11" onclick="refazer(11)">Tentar Novamente</button>
+            </div>
+        </div>
+        <div class="modal-pergunta12">
+            <div class="modal-base modal-pergunta">
+                <h2>Quem foi o primeiro governador do Brasil?</h2>
+                <button class="opcao" onclick="responder(12, false)">Luiz Inácio Lula da Silva</button>
+                <button class="opcao" onclick="responder(12, true)">Tomé de Souza</button>
+                <button class="opcao" onclick="responder(12, false)">Getúlio Vargas</button>
+
+                <p class="feedback" id="feedback12"></p>
+                <img src="Imagens/caraFeliz.png" id="imgCerta12" class="imagem-feedback hidden"
+                    alt="Parabéns! Você acertou" />
+                <br>
+                <button class="botao hidden" id="botaoProxima12"
+                    onclick="closeModal('.modal-pergunta12')">Continuar</button>
+                <button class="botao hidden" id="botaoRefazer12" onclick="refazer(12)">Tentar Novamente</button>
+            </div>
+        </div>
+        <div class="modal-pergunta13">
+            <div class="modal-base modal-pergunta">
+                <h2>Por que os africanos foram trazidos para o Brasil?</h2>
+                <button class="opcao" onclick="responder(13, false)">Para passarem as férias </button>
+                <button class="opcao" onclick="responder(13, true)">Para trabalhar no açúcar</button>
+                <button class="opcao" onclick="responder(13, false)">Para trabalhar em sapatarias</button>
+
+                <p class="feedback" id="feedback13"></p>
+                <img src="Imagens/caraFeliz.png" id="imgCerta13" class="imagem-feedback hidden"
+                    alt="Parabéns! Você acertou" />
+                <br>
+                <button class="botao hidden" id="botaoProxima13"
+                    onclick="closeModal('.modal-pergunta13')">Continuar</button>
+                <button class="botao hidden" id="botaoRefazer13" onclick="refazer(13)">Tentar Novamente</button>
+            </div>
+        </div>
         <div class="modal-video1">
             <div class="modal-base modal-video">
                 <h2>Video</h2>
                 <hr />
                 <span>
-                    <iframe width="706" height="397" src="https://www.youtube.com/embed/-SAdry5BkYg?si=iefcr-NaPndzcqsU"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="706" height="397" src="https://www.youtube.com/embed/l5-ui4I0AMc?si=BXLZFmBIdYP6KzG1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
                 </span>
                 <hr />
                 <div class="btns">
                     <button class="btnClose" onclick="closeModal('.modal-video1')"><strong>Continuar</strong></button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-video2">
+            <div class="modal-base modal-video">
+                <h2>Video</h2>
+                <hr />
+                <span>
+                    <iframe width="706" height="397" src="https://www.youtube.com/embed/p6IxQbme1pI?si=vwAi1aPJBRbCIaFj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    
+                </span>
+                <hr />
+                <div class="btns">
+                    <button class="btnClose" onclick="closeModal('.modal-video2')"><strong>Continuar</strong></button>
                 </div>
             </div>
         </div>

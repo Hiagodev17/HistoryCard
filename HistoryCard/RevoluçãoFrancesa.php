@@ -130,8 +130,7 @@
             </div>
 
             <div class="parabens">
-                <button class="btnOpenModal-parabens" onclick="openModal('.modal-parabens')"><img
-                        src="Imagens/play.png" class="popUpVideo"></button>
+                <button class="btnContinuar" onclick="closeModal('.modal-parabens')"><strong>Ver Meu Feedback</strong></button>
             </div>
             <div class="sair">
                 <a href="TelaInicial.php">
@@ -147,18 +146,18 @@
                     <img src="Imagens/parabens.png" style="height: 300px;width: 300px;"><br><br><br><br>
                     <strong>
                         <p style=" font-size: 30px;">Parabéns! Você concluío o card da Revolução Francesa.<br>Vamos
-                            iniciar outro card!</p>
+                            ver seu feedback!</p>
                     </strong>
-
                 </span>
                 <hr />
                 <div class="btns">
-
-                    <button class="btnContinuar"
-                        onclick="closeModal('.modal-parabens')"><strong>Finalizar</strong></button>
+                    <button class="btnContinuar" onclick="closeModal('.modal-parabens')">
+                        <strong>Ver Feedback</strong>
+                    </button>
                 </div>
             </div>
         </div>
+
         <div class="modal-contexto1">
             <div class="modal-base modal-contexto">
                 <h2>Texto-Áudio</h2>
@@ -364,7 +363,7 @@
                         <strong>Escreva o que você entendeu nos quadrinhos!</strong>
                     </p>
                     <br>
-                    <textarea name="Descrição" class="descricaoHQ"></textarea>
+                    <textarea name="Descrição" class="descricaoHQ" id="hq1-textarea"></textarea>
                 </span>
                 <hr />
 
@@ -386,7 +385,7 @@
                         <strong>Escreva o que você entendeu nos quadrinhos!</strong>
                     </p>
                     <br>
-                    <textarea name="Descrição" class="descricaoHQ"></textarea>
+                   <textarea name="Descrição" class="descricaoHQ" id="hq2-textarea"></textarea>
                 </span>
                 <hr />
 
@@ -408,7 +407,7 @@
                         <strong>Escreva o que você entendeu nos quadrinhos!</strong>
                     </p>
                     <br>
-                    <textarea name="Descrição" class="descricaoHQ"></textarea>
+                    <textarea name="Descrição" class="descricaoHQ" id="hq3-textarea"></textarea>
                 </span>
                 <hr />
 
@@ -430,7 +429,7 @@
                         <strong>Escreva o que você entendeu nos quadrinhos!</strong>
                     </p>
                     <br>
-                    <textarea name="Descrição" class="descricaoHQ"></textarea>
+                        <textarea name="Descrição" class="descricaoHQ" id="hq4-textarea"></textarea>
                 </span>
                 <hr />
 
@@ -452,7 +451,7 @@
                         <strong>Escreva o que você entendeu nos quadrinhos!</strong>
                     </p>
                     <br>
-                    <textarea name="Descrição" class="descricaoHQ"></textarea>
+                    <textarea name="Descrição" class="descricaoHQ" id="hq5-textarea"></textarea>
                 </span>
                 <hr />
 
@@ -461,6 +460,11 @@
                     <button class="btnClose" onclick="closeModal('.modal-HQ5')"><strong>Continuar</strong></button>
                 </div>
             </div>
+        </div>
+         <div class="sair">
+            <button class="retornar" onclick="window.location.href='FeedbackRevolucaoFrancesa.php'">
+                <strong>VER FEEDBACK</strong>
+            </button>
         </div>
 
     </main>
