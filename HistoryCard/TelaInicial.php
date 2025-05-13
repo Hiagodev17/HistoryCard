@@ -76,7 +76,7 @@
                 <br>
                 <img class="img-card" src="Imagens/primeiraguerramundial.jpg">
                 <br><br>
-                <a href="">
+                <a href="PrimeiraGuerra.php">
                     <button class="botaoCard">ENTRAR</button>
                 </a>
             </div>

@@ -1,5 +1,3 @@
-let respostas = {};
-let anotacoes = {};
 
 class MobileNavbar {
   constructor(mobileMenu, navList, navLinks) {
@@ -49,18 +47,22 @@ function openModal(selector) {
 }
 function closeModal(selector) {
   document.querySelector(selector).classList.remove('active');
-  
+
+  // Verifica se este modal está no mapeamento
   if (modalToCircle[selector]) {
     const currentCircle = modalToCircle[selector];
     const nextCircle = circleSequence[currentCircle];
 
     // Atualiza as cores dos círculos
     updateCircleColors(currentCircle, nextCircle);
-    
-    // Caso especial para o modal de parabéns
-    if (selector === '.modal-parabens') {
-      document.querySelector('.parabens').classList.remove('circulo-verde');
-      document.querySelector('.parabens').classList.add('circulo-dourado');
+  }
+
+  // Salva as respostas das HQs
+  if (selector.startsWith('.modal-HQ')) {
+    const hqNumber = selector.match(/\d+/)[0];
+    const resposta = document.querySelector(`${selector} .descricaoHQ`).value;
+    if (resposta) {
+      localStorage.setItem(`hq${hqNumber}`, resposta);
     }
   }
 }
@@ -75,44 +77,37 @@ function fecharModal(classe) {
 }
 
 function responder(perguntaId, correta) {
-    const feedback = document.getElementById(`feedback${perguntaId}`);
-    const botaoProxima = document.getElementById(`botaoProxima${perguntaId}`);
-    const botaoRefazer = document.getElementById(`botaoRefazer${perguntaId}`);
-    const imagem = document.getElementById(`imgCerta${perguntaId}`);
+  const feedback = document.getElementById(`feedback${perguntaId}`);
+  const botaoProxima = document.getElementById(`botaoProxima${perguntaId}`);
+  const botaoRefazer = document.getElementById(`botaoRefazer${perguntaId}`);
+  const imagem = document.getElementById(`imgCerta${perguntaId}`);
+  
 
-    // Salva a resposta
-    salvarResposta(perguntaId, correta);
+  if (correta) {
+    feedback.innerText = "Parabéns! Você acertou!";
+    feedback.style.color = "green";
+    feedback.style.fontSize = "30px";
+    botaoProxima.classList.remove("hidden");
+    botaoRefazer.classList.add("hidden");
+    if (imagem) imagem.classList.remove("hidden");
+    // Armazena no localStorage que o usuário acertou
+    localStorage.setItem(`pergunta${perguntaId}`, 'acertou');
+  } else {
+    feedback.innerText = "Não foi dessa vez, tente novamente!";
+    feedback.style.color = "red";
+    feedback.style.fontSize = "30px";
+    botaoRefazer.classList.remove("hidden");
+    botaoProxima.classList.add("hidden");
+    if (imagem) imagem.classList.add("hidden");
+    // Armazena no localStorage que o usuário errou
+    localStorage.setItem(`pergunta${perguntaId}`, 'errou');
+  }
 
-    if (correta) {
-        feedback.innerText = "Parabéns! Você acertou!";
-        feedback.style.color = "green";
-        feedback.style.fontSize = "30px";
-        botaoProxima.classList.remove("hidden");
-        botaoRefazer.classList.add("hidden");
-        if (imagem) imagem.classList.remove("hidden");
-    } else {
-        feedback.innerText = "Não foi dessa vez, tente novamente!";
-        feedback.style.color = "red";
-        feedback.style.fontSize = "30px";
-        botaoRefazer.classList.remove("hidden");
-        botaoProxima.classList.add("hidden");
-        if (imagem) imagem.classList.add("hidden");
-    }
-
-    document.querySelectorAll(`.modal-pergunta${perguntaId} .opcao`).forEach(btn => {
-        btn.disabled = true;
-    });
+  // Desativa os botões de opção
+  document.querySelectorAll(`.modal-pergunta${perguntaId} .opcao`).forEach(btn => {
+    btn.disabled = true;
+  });
 }
-
-function salvarAnotacaoHQ(numeroHQ) {
-    let anotacoes = JSON.parse(localStorage.getItem('anotacoesRevolucaoFrancesa')) || {};
-    const textarea = document.querySelector(`.modal-HQ${numeroHQ} .descricaoHQ`);
-    if (textarea) {
-        anotacoes[`hq${numeroHQ}`] = textarea.value;
-        localStorage.setItem('anotacoesRevolucaoFrancesa', JSON.stringify(anotacoes));
-    }
-}
-
 function refazer(numeroPergunta) {
   document.querySelectorAll(`.modal-pergunta${numeroPergunta} .opcao`).forEach(btn => btn.disabled = false);
   document.getElementById(`feedback${numeroPergunta}`).textContent = "";
@@ -132,10 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Define o primeiro círculo como verde
   document.getElementById('circ1').classList.add('circulo-verde');
 });
-document.addEventListener('DOMContentLoaded', function() {
-    respostas = JSON.parse(localStorage.getItem('respostasRevolucaoFrancesa')) || {};
-    anotacoes = JSON.parse(localStorage.getItem('anotacoesRevolucaoFrancesa')) || {};
-});
+
 // Mapeamento entre círculos e seus próximos na sequência
 const circleSequence = {
   'circ1': 'circ2',
@@ -200,33 +192,4 @@ function updateCircleColors(completedCircle, nextCircle) {
 
 function openModal(selector) {
   document.querySelector(selector).classList.add('active');
-}
-
-function closeModal(selector) {
-    document.querySelector(selector).classList.remove('active');
-
-    // Verifica se é um modal de HQ e salva a anotação
-    if (selector.startsWith('.modal-HQ')) {
-        const hqNumber = selector.match(/\d+/)[0];
-        salvarAnotacaoHQ(hqNumber);
-    }
-
-    if (modalToCircle[selector]) {
-        const currentCircle = modalToCircle[selector];
-        const nextCircle = circleSequence[currentCircle];
-
-        updateCircleColors(currentCircle, nextCircle);
-        
-        // Redireciona para a página de feedback quando o modal de parabéns é fechado
-        if (selector === '.modal-parabens') {
-            setTimeout(() => {
-                window.location.href = 'FeedbackRevolucaoFrancesa.php';
-            }, 500);
-        }
-    }
-}
-function salvarResposta(perguntaId, correta) {
-    let respostas = JSON.parse(localStorage.getItem('respostasRevolucaoFrancesa')) || {};
-    respostas[`pergunta${perguntaId}`] = correta;
-    localStorage.setItem('respostasRevolucaoFrancesa', JSON.stringify(respostas));
 }
